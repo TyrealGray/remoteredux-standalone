@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Eventroom 101</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="profile.html" style="color:blue">Back to profile</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-calendar"></span> Event <span class="badge">1</span><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="party-room.html">Party (Hamburg) <span class="badge">29.10.2016</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-comment"></span> Message <span class="badge">10</span><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="party-room.html">29.10.2016: Party (Hamburg) <span class="badge">10</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> Setting<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Address</a></li>
+                            <li><a href="#">Phone & Email</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="index.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Arrange your wedding</div>
+
+
+                    <!-- List group -->
+                    <div class="list-group">
+                        <button type="button" class="list-group-item" data-toggle="modal" data-target="#myModal"><strong>Design invitation card</strong></button>
+                        <button type="button" class="list-group-item">Time</button>
+                        <button type="button" class="list-group-item">Order Hotel</button>
+                        <button type="button" class="list-group-item">Pay bills</button>
+                        <button type="button" class="list-group-item">Extra orders</button>
+                    </div>
+
+                    <div class="panel-body">
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--info end-->
+
+            <div class="col-md-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Wedding event</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="jumbotron">
+                                    <h1>Hello, Everyone</h1>
+                                    <p>This wedding would start at 29.02.2017 9AM</p>
+                                    <p><a class="btn btn-primary btn-lg" target="_blank" href="https://www.google.de/maps/@53.5554979,10.041341,17.51z?hl=DE"
+                                            role="button">Check map</a></p>
+
+                                </div>
+                                <div class="well">Host message: welcome!</div>
+                                <div class="well">Host message: If you have any question, pls connect!</div>
+                            </div>
+                        </div>
+
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="send your message">
+                            <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Send</button>
+      </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--chat end-->
+
+        </div>
+    </div>
+
+    <!--modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">choose your design</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="img/card.jpg" width="95%">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/3rdLib/bootstrap.min.js"></script>
+</body>
+
+</html>
