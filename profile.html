@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="utf-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <style>
+        /*body {
+            background-image: url("img/main-page.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: #cccccc;
+        }*/
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">HHL</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> New Event <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Wedding <span class="glyphicon glyphicon-heart"></span></a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Birthday <span class="glyphicon glyphicon-user"></span></a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Celebration <span class="glyphicon glyphicon-glass"></span></a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Party <span class="glyphicon glyphicon-home"></span></a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Dinner <span class="glyphicon glyphicon-cutlery"></span></a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Movie <span class="glyphicon glyphicon-film"></span></a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Travel <span class="glyphicon glyphicon-plane"></span></a></li>
+                        </ul>
+                    </li>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group dropdown">
+
+                            <input type="text" class="form-control" placeholder="Search" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true">
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <a href="friend.html"><img src="img/bon.jpg" width="25px"> Friend: Bourne</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/kamtum.png" width="25px"> Shop: Kartenmacherei</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/Amazon.com-Logo.png" width="25px"> Shop: Amazon</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-calendar"></span> Event <span class="badge">2</span><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="event-room.html">Wedding (Hamburg) <span class="badge">29.02.2017</span></a></li>
+                            <li><a href="party-room.html">Party (Hamburg) <span class="badge">29.10.2016</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-comment"></span> Message <span class="badge">12</span><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="event-room.html">29.02.2017: Wedding (Hamburg) <span class="badge">2</span></a></li>                            
+                            <li><a href="party-room.html">29.10.2016: Party (Hamburg) <span class="badge">10</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> Setting<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Address</a></li>
+                            <li><a href="#">Phone & Email</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="index.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-xs-4 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1>Jone Snow<small><img src="img/profile.png"></small></h1>
+
+                        <h4>Achievement: <span class="label label-warning" data-toggle="tooltip" data-placement="top" title="have been to 67 Weddings">BestMan</span></h4>
+                        <p>Email:jone_snow@gmail.com</p>
+                        <p>Tel:49 01527364924(friend only)</p>
+                        <p>Age:30(everyone)</p>
+                    </div>
+                </div>
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> Please set your address to enable express delivery service.!
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-justified" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Overview</a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Wedding</a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Party</a></li>
+                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Celebration</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+
+
+                                <div class="bs-example" data-example-id="contextual-panels" style="padding: 45px 15px 15px;">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title" ><a href="event-room.html">Wedding (Hamburg)</a><span style="float:right"><button class="btn btn-danger" type="submit">Cancel</button></span></h3>
+                                        </div>
+                                        <div class="panel-body">
+
+
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span class="glyphicon glyphicon-calendar">29.02.2017</span></th>
+                                                        <th><span class="glyphicon glyphicon-time">9am</span></th>
+                                                        <th><span class="glyphicon glyphicon glyphicon-map-marker">BurgStaße</span></th>
+                                                        <th><span class="glyphicon glyphicon-user">120/142</span></th>
+                                                        <th><span class="glyphicon glyphicon-gift">unpayed</span></th>
+                                                    </tr>
+                                                </thead>
+
+                                            </table>
+                                            <div style="overflow: hidden">
+
+                                                <img src="img/wedding.jpeg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"><a href="party-room.html"> Party (Hamburg) </a><span style="float:right"><button class="btn btn-danger" type="submit">Decline</button></span>
+                                            </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span class="glyphicon glyphicon-calendar">29.10.2016</span></th>
+                                                        <th><span class="glyphicon glyphicon-time">9pm</span></th>
+                                                        <th><span class="glyphicon glyphicon glyphicon-map-marker">ferdinandStaße</span></th>
+                                                        <th><span class="glyphicon glyphicon-user">13/14</span></th>
+                                                        <th><span class="glyphicon glyphicon-check">join</span></th>
+                                                    </tr>
+                                                </thead>
+
+                                            </table>
+                                            <div style="overflow: hidden">
+
+                                                <img src="img/party.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"> Celebration (HongKong) <span class="" style="float:right"><a target="_blank" href="photo-zone.html" class="btn btn-success" type="submit">view</a></span></h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span class="glyphicon glyphicon-calendar">20.11.2015(Over)</span></th>
+                                                        <th><span class="glyphicon glyphicon-time">7pm</span></th>
+                                                        <th><span class="glyphicon glyphicon glyphicon-map-marker">KingStreet</span></th>
+                                                        <th><span class="glyphicon glyphicon-user">296/300</span></th>
+                                                        <th><span class="glyphicon glyphicon-gift">payed</span></th>
+                                                    </tr>
+                                                </thead>
+
+                                            </table>
+                                            <div style="overflow: hidden">
+
+                                                <img src="img/celeb.png">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile">
+                                <div class="bs-example" data-example-id="contextual-panels" style="padding: 45px 15px 15px;">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"><a href="event-room.html">Wedding (Hamburg)</a><span style="float:right"><button class="btn btn-danger" type="submit">Cancel</button></span></h3>
+                                        </div>
+                                        <div class="panel-body">
+
+
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span class="glyphicon glyphicon-calendar">29.02.2017</span></th>
+                                                        <th><span class="glyphicon glyphicon-time">9am</span></th>
+                                                        <th><span class="glyphicon glyphicon glyphicon-map-marker">BurgStaße</span></th>
+                                                        <th><span class="glyphicon glyphicon-user">120/142</span></th>
+                                                        <th><span class="glyphicon glyphicon-gift">unpayed</span></th>
+                                                    </tr>
+                                                </thead>
+
+                                            </table>
+                                            <div style="overflow: hidden">
+
+                                                <img src="img/wedding.jpeg">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages">
+
+                                <div class="bs-example" data-example-id="contextual-panels" style="padding: 45px 15px 15px;">
+
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"><a href="party-room.html">Party (Hamburg)</a><span style="float:right"><button class="btn btn-danger" type="submit">Decline</button></span></h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span class="glyphicon glyphicon-calendar">29.10.2016</span></th>
+                                                        <th><span class="glyphicon glyphicon-time">9pm</span></th>
+                                                        <th><span class="glyphicon glyphicon glyphicon-map-marker">ferdinandStaße</span></th>
+                                                        <th><span class="glyphicon glyphicon-user">13/14</span></th>
+                                                        <th><span class="glyphicon glyphicon-check">join</span></th>
+                                                    </tr>
+                                                </thead>
+
+                                            </table>
+                                            <div style="overflow: hidden">
+
+                                                <img src="img/party.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="settings">
+
+                                <div class="bs-example" data-example-id="contextual-panels" style="padding: 45px 15px 15px;">
+
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"> Celebration (HongKong) <span class="" style="float:right"><a target="_blank" href="photo-zone.html" class="btn btn-success" type="submit">view</a></span></h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span class="glyphicon glyphicon-calendar">20.11.2015(Over)</span></th>
+                                                        <th><span class="glyphicon glyphicon-time">7pm</span></th>
+                                                        <th><span class="glyphicon glyphicon glyphicon-map-marker">KingStreet</span></th>
+                                                        <th><span class="glyphicon glyphicon-user">296/300</span></th>
+                                                        <th><span class="glyphicon glyphicon-gift">payed</span></th>
+                                                    </tr>
+                                                </thead>
+
+                                            </table>
+                                            <div style="overflow: hidden">
+
+                                                <img src="img/celeb.png">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1 col-md-1">
+                <div class="btn-group-vertical" role="group">
+                    <button type="button" class="btn btn-primary">2016</button>
+                    <button type="button" class="btn btn-default">2015</button>
+                </div>
+
+                
+
+            </div>
+
+            <div class="col-xs-2 col-md-2">
+                <div class="panel panel-default">
+                    <h3>Friend list</h3>
+                    <div class="panel-body">
+                        <a href="friend.html"><img src="img/bon.jpg" width="25px"> Bourne</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Set up Event
+                        <span>
+                        <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Wedding <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Wedding</a></li>
+                            <li><a href="#">Birthday</a></li>
+                            <li><a href="#">...</a></li>
+                        </ul>
+                </div>
+                </span>
+                </h4>
+
+            </div>
+            <div class="modal-body">
+                <div class="page-header">
+                    <h2>Friend list <small>Choose who can join</small></h2>
+                    <input type="checkbox"> Bourne
+                </div>
+
+                <div>
+                    <h2>Accessibility</h2>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills" role="tablist">
+                        <li role="presentation" class="active"><a href="#home2" aria-controls="home2" role="tab" data-toggle="tab">Private</a></li>
+                        <li role="presentation"><a href="#profile2" aria-controls="profile2" role="tab" data-toggle="tab">Code</a></li>
+                        <li role="presentation"><a href="#messages2" aria-controls="messages2" role="tab" data-toggle="tab">Code & Approval </a></li>
+                        <li role="presentation"><a href="#settings2" aria-controls="settings2" role="tab" data-toggle="tab">Everyone</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home2"></div>
+                        <div role="tabpanel" class="tab-pane" id="profile2">
+                            <div><img src="img/event-room.jpeg"></div>
+                            Anyone who has this code could join
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages2">
+                            <div><img src="img/event-room.jpeg"></div>
+                            Anyone who has this code need my approval
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="settings2">
+                            <div><img src="img/event-room.jpeg"></div>
+                            Everyone could join your event on your profile
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="event-room.html" type="button" class="btn btn-success">Create</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="js/3rdLib/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+</body>
+
+</html>
