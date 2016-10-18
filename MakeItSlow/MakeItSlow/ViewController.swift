@@ -22,6 +22,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.wk = WKWebView(frame: self.view.frame)
+        self.wk.load(NSURLRequest(url: NSURL(string: "http://www.baidu.com/")! as URL) as URLRequest)
+        self.view.addSubview(self.wk)
+    }
 
 
 }
