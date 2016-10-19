@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A4951E61DB6B55100663F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4951E51DB6B55100663F7C /* AppDelegate.swift */; };
-		4A4951E81DB6B55100663F7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4951E71DB6B55100663F7C /* ViewController.swift */; };
-		4A4951EB1DB6B55100663F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4951E91DB6B55100663F7C /* Main.storyboard */; };
-		4A4951ED1DB6B55100663F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4951EC1DB6B55100663F7C /* Assets.xcassets */; };
-		4A4951F01DB6B55100663F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4951EE1DB6B55100663F7C /* LaunchScreen.storyboard */; };
+		4A53686A1DB759B400978C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5368691DB759B400978C82 /* AppDelegate.swift */; };
+		4A53686C1DB759B400978C82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A53686B1DB759B400978C82 /* ViewController.swift */; };
+		4A53686F1DB759B400978C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A53686D1DB759B400978C82 /* Main.storyboard */; };
+		4A5368711DB759B400978C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5368701DB759B400978C82 /* Assets.xcassets */; };
+		4A5368741DB759B400978C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5368721DB759B400978C82 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A4951E21DB6B55100663F7C /* MakeItSlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItSlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A4951E51DB6B55100663F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A4951E71DB6B55100663F7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4A4951EA1DB6B55100663F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4A4951EC1DB6B55100663F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4A4951EF1DB6B55100663F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4A4951F11DB6B55100663F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A5368661DB759B400978C82 /* MakeItSlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItSlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A5368691DB759B400978C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A53686B1DB759B400978C82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A53686E1DB759B400978C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A5368701DB759B400978C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A5368731DB759B400978C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A5368751DB759B400978C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4A4951DF1DB6B55100663F7C /* Frameworks */ = {
+		4A5368631DB759B400978C82 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,31 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A4951D91DB6B55100663F7C = {
+		4A53685D1DB759B400978C82 = {
 			isa = PBXGroup;
 			children = (
-				4A4951E41DB6B55100663F7C /* MakeItSlow */,
-				4A4951E31DB6B55100663F7C /* Products */,
+				4A5368681DB759B400978C82 /* MakeItSlow */,
+				4A5368671DB759B400978C82 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4A4951E31DB6B55100663F7C /* Products */ = {
+		4A5368671DB759B400978C82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A4951E21DB6B55100663F7C /* MakeItSlow.app */,
+				4A5368661DB759B400978C82 /* MakeItSlow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4A4951E41DB6B55100663F7C /* MakeItSlow */ = {
+		4A5368681DB759B400978C82 /* MakeItSlow */ = {
 			isa = PBXGroup;
 			children = (
-				4A4951E51DB6B55100663F7C /* AppDelegate.swift */,
-				4A4951E71DB6B55100663F7C /* ViewController.swift */,
-				4A4951E91DB6B55100663F7C /* Main.storyboard */,
-				4A4951EC1DB6B55100663F7C /* Assets.xcassets */,
-				4A4951EE1DB6B55100663F7C /* LaunchScreen.storyboard */,
-				4A4951F11DB6B55100663F7C /* Info.plist */,
+				4A5368691DB759B400978C82 /* AppDelegate.swift */,
+				4A53686B1DB759B400978C82 /* ViewController.swift */,
+				4A53686D1DB759B400978C82 /* Main.storyboard */,
+				4A5368701DB759B400978C82 /* Assets.xcassets */,
+				4A5368721DB759B400978C82 /* LaunchScreen.storyboard */,
+				4A5368751DB759B400978C82 /* Info.plist */,
 			);
 			path = MakeItSlow;
 			sourceTree = "<group>";
@@ -67,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A4951E11DB6B55100663F7C /* MakeItSlow */ = {
+		4A5368651DB759B400978C82 /* MakeItSlow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A4951F41DB6B55100663F7C /* Build configuration list for PBXNativeTarget "MakeItSlow" */;
+			buildConfigurationList = 4A5368781DB759B400978C82 /* Build configuration list for PBXNativeTarget "MakeItSlow" */;
 			buildPhases = (
-				4A4951DE1DB6B55100663F7C /* Sources */,
-				4A4951DF1DB6B55100663F7C /* Frameworks */,
-				4A4951E01DB6B55100663F7C /* Resources */,
+				4A5368621DB759B400978C82 /* Sources */,
+				4A5368631DB759B400978C82 /* Frameworks */,
+				4A5368641DB759B400978C82 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,27 +81,26 @@
 			);
 			name = MakeItSlow;
 			productName = MakeItSlow;
-			productReference = 4A4951E21DB6B55100663F7C /* MakeItSlow.app */;
+			productReference = 4A5368661DB759B400978C82 /* MakeItSlow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4A4951DA1DB6B55100663F7C /* Project object */ = {
+		4A53685E1DB759B400978C82 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Tyreal Gray";
 				TargetAttributes = {
-					4A4951E11DB6B55100663F7C = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = EQA6H2944M;
-						ProvisioningStyle = Automatic;
+					4A5368651DB759B400978C82 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P6UDBE2K5U;
 					};
 				};
 			};
-			buildConfigurationList = 4A4951DD1DB6B55100663F7C /* Build configuration list for PBXProject "MakeItSlow" */;
+			buildConfigurationList = 4A5368611DB759B400978C82 /* Build configuration list for PBXProject "MakeItSlow" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -109,54 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 4A4951D91DB6B55100663F7C;
-			productRefGroup = 4A4951E31DB6B55100663F7C /* Products */;
+			mainGroup = 4A53685D1DB759B400978C82;
+			productRefGroup = 4A5368671DB759B400978C82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A4951E11DB6B55100663F7C /* MakeItSlow */,
+				4A5368651DB759B400978C82 /* MakeItSlow */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4A4951E01DB6B55100663F7C /* Resources */ = {
+		4A5368641DB759B400978C82 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4951F01DB6B55100663F7C /* LaunchScreen.storyboard in Resources */,
-				4A4951ED1DB6B55100663F7C /* Assets.xcassets in Resources */,
-				4A4951EB1DB6B55100663F7C /* Main.storyboard in Resources */,
+				4A5368741DB759B400978C82 /* LaunchScreen.storyboard in Resources */,
+				4A5368711DB759B400978C82 /* Assets.xcassets in Resources */,
+				4A53686F1DB759B400978C82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4A4951DE1DB6B55100663F7C /* Sources */ = {
+		4A5368621DB759B400978C82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4951E81DB6B55100663F7C /* ViewController.swift in Sources */,
-				4A4951E61DB6B55100663F7C /* AppDelegate.swift in Sources */,
+				4A53686C1DB759B400978C82 /* ViewController.swift in Sources */,
+				4A53686A1DB759B400978C82 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4A4951E91DB6B55100663F7C /* Main.storyboard */ = {
+		4A53686D1DB759B400978C82 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4A4951EA1DB6B55100663F7C /* Base */,
+				4A53686E1DB759B400978C82 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4A4951EE1DB6B55100663F7C /* LaunchScreen.storyboard */ = {
+		4A5368721DB759B400978C82 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4A4951EF1DB6B55100663F7C /* Base */,
+				4A5368731DB759B400978C82 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -164,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4A4951F21DB6B55100663F7C /* Debug */ = {
+		4A5368761DB759B400978C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -176,13 +175,10 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -204,16 +200,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		4A4951F31DB6B55100663F7C /* Release */ = {
+		4A5368771DB759B400978C82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -225,13 +220,10 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -247,61 +239,62 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4A4951F51DB6B55100663F7C /* Debug */ = {
+		4A5368791DB759B400978C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EQA6H2944M;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MakeItSlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SkyHarp.MakeItSlow;
+				PRODUCT_BUNDLE_IDENTIFIER = self.MakeItSlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		4A4951F61DB6B55100663F7C /* Release */ = {
+		4A53687A1DB759B400978C82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EQA6H2944M;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MakeItSlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SkyHarp.MakeItSlow;
+				PRODUCT_BUNDLE_IDENTIFIER = self.MakeItSlow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A4951DD1DB6B55100663F7C /* Build configuration list for PBXProject "MakeItSlow" */ = {
+		4A5368611DB759B400978C82 /* Build configuration list for PBXProject "MakeItSlow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4A4951F21DB6B55100663F7C /* Debug */,
-				4A4951F31DB6B55100663F7C /* Release */,
+				4A5368761DB759B400978C82 /* Debug */,
+				4A5368771DB759B400978C82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A4951F41DB6B55100663F7C /* Build configuration list for PBXNativeTarget "MakeItSlow" */ = {
+		4A5368781DB759B400978C82 /* Build configuration list for PBXNativeTarget "MakeItSlow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4A4951F51DB6B55100663F7C /* Debug */,
-				4A4951F61DB6B55100663F7C /* Release */,
+				4A5368791DB759B400978C82 /* Debug */,
+				4A53687A1DB759B400978C82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4A4951DA1DB6B55100663F7C /* Project object */;
+	rootObject = 4A53685E1DB759B400978C82 /* Project object */;
 }
