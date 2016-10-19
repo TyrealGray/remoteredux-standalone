@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A4951E11DB6B55100663F7C"
+               BlueprintIdentifier = "4A5368651DB759B400978C82"
                BuildableName = "MakeItSlow.app"
                BlueprintName = "MakeItSlow"
                ReferencedContainer = "container:MakeItSlow.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A4951E11DB6B55100663F7C"
+            BlueprintIdentifier = "4A5368651DB759B400978C82"
             BuildableName = "MakeItSlow.app"
             BlueprintName = "MakeItSlow"
             ReferencedContainer = "container:MakeItSlow.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A4951E11DB6B55100663F7C"
+            BlueprintIdentifier = "4A5368651DB759B400978C82"
             BuildableName = "MakeItSlow.app"
             BlueprintName = "MakeItSlow"
             ReferencedContainer = "container:MakeItSlow.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A4951E11DB6B55100663F7C"
+            BlueprintIdentifier = "4A5368651DB759B400978C82"
             BuildableName = "MakeItSlow.app"
             BlueprintName = "MakeItSlow"
             ReferencedContainer = "container:MakeItSlow.xcodeproj">
