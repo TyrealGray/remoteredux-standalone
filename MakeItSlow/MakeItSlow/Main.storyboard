@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4c2-UT-kte">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--HHL-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MakeItSlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fA8-z3-Hxu" userLabel="Web View Container">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <connections>
+                                    <segue destination="PBl-Tw-WKd" kind="embed" identifier="EmbedWebView" id="DpB-ex-Xkh"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fA8-z3-Hxu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7tw-Do-jHJ"/>
+                            <constraint firstAttribute="trailing" secondItem="fA8-z3-Hxu" secondAttribute="trailing" id="I9l-0a-lzw"/>
+                            <constraint firstItem="fA8-z3-Hxu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UCP-t1-1TI"/>
+                            <constraint firstItem="fA8-z3-Hxu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="v6e-rK-Uy0"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="HHL" id="CeC-y1-wIG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ezd-aw-q6j">
+                            <connections>
+                                <segue destination="owC-im-5eu" kind="show" id="HI2-lm-ghP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38.5" y="505.5"/>
+        </scene>
+        <!--Scan Code-->
+        <scene sceneID="D1u-cx-6mn">
+            <objects>
+                <viewController id="owC-im-5eu" customClass="QRCodeViewController" customModule="MakeItSlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DS0-aO-jyD"/>
+                        <viewControllerLayoutGuide type="bottom" id="31R-G0-cUd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1PJ-9U-uc4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="okW-WK-ZR4" userLabel="Scan Line">
+                                <rect key="frame" x="37" y="184" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="guH-XH-OqM"/>
+                                    <constraint firstAttribute="height" constant="300" id="ohl-Dm-Xnc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="GRI-LN-Ql7" userLabel="Frame">
+                                <rect key="frame" x="37" y="184" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Mg6-tX-sRO"/>
+                                    <constraint firstAttribute="width" constant="300" id="sYB-XB-cXv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="okW-WK-ZR4" firstAttribute="centerX" secondItem="1PJ-9U-uc4" secondAttribute="centerX" id="1gL-tG-BV3"/>
+                            <constraint firstItem="okW-WK-ZR4" firstAttribute="centerY" secondItem="1PJ-9U-uc4" secondAttribute="centerY" id="Puz-WF-jDl"/>
+                            <constraint firstItem="GRI-LN-Ql7" firstAttribute="centerY" secondItem="1PJ-9U-uc4" secondAttribute="centerY" id="cPJ-ER-EQo"/>
+                            <constraint firstItem="GRI-LN-Ql7" firstAttribute="centerX" secondItem="1PJ-9U-uc4" secondAttribute="centerX" id="dzd-nQ-dBf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan Code" id="8QO-zJ-3e2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="containerHeihhtCons" destination="Mg6-tX-sRO" id="zcV-Xo-RxU"/>
+                        <outlet property="scanImageView" destination="okW-WK-ZR4" id="ite-2W-ShH"/>
+                        <outlet property="scanLineConstraint" destination="sYB-XB-cXv" id="I6y-GK-OuK"/>
+                        <segue destination="4c2-UT-kte" kind="presentation" identifier="ScanDone" id="Zmr-9t-UKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQf-dF-2FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451.5" y="674.5"/>
+        </scene>
+        <!--HHL-->
+        <scene sceneID="zwC-V3-y15">
+            <objects>
+                <navigationController title="HHL" id="4c2-UT-kte" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JB0-Rh-CJD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HvP-TM-teq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBO-fz-NSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527.5" y="1520.5"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Wj9-U4-e2w">
+            <objects>
+                <viewController id="PBl-Tw-WKd" customClass="WebViewController" customModule="MakeItSlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KxV-wI-P0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451.5" y="276.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+    </resources>
+</document>

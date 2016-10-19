@@ -9,16 +9,19 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate,WKUIDelegate {
+class ViewController: UIViewController {
     
+    var urlString:String?
     
-    
-    var wk: WKWebView!
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if ((urlString) != nil){
+            
+            let webview = self.embeddedViewController as WebViewController
+            webview.goUrl(urlString!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,44 +29,21 @@ class ViewController: UIViewController, WKNavigationDelegate,WKUIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    private typealias wkNavigationDelegate = ViewController
-    
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.wk = WKWebView(frame: self.view.frame)
-        self.wk.loadRequest(NSURLRequest(URL: NSURL(string: "https://tyrealgray.github.io/MakeItSlow/")!))
-        self.view.addSubview(self.wk)
-        
-        self.wk.navigationDelegate = self
-        self.wk.UIDelegate = self
-        
     }
-
-}
-
-private typealias wkNavigationDelegate = ViewController
-extension wkNavigationDelegate {
     
-    func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
-        NSLog(error.debugDescription)
-    }
-    func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
-        NSLog(error.debugDescription)
-    }
-}
-
-private typealias wkUIDelegate = ViewController
-extension wkUIDelegate {
+    private weak var embeddedViewController: WebViewController!
     
-    func webView(webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: () -> Void) {
-        let ac = UIAlertController(title: webView.title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        ac.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (aa) -> Void in
-            completionHandler()
-        }))
-        self.presentViewController(ac, animated: true, completion: nil)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let wvvc = segue.destinationViewController as? WebViewController
+            where segue.identifier == "EmbedWebView" {
+            
+            self.embeddedViewController = wvvc
+        }
     }
+
 }
 
 
