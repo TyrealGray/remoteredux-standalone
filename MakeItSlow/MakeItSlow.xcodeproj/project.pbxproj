@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		4A53686A1DB759B400978C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5368691DB759B400978C82 /* AppDelegate.swift */; };
 		4A53686C1DB759B400978C82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A53686B1DB759B400978C82 /* ViewController.swift */; };
-		4A53686F1DB759B400978C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A53686D1DB759B400978C82 /* Main.storyboard */; };
 		4A5368711DB759B400978C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5368701DB759B400978C82 /* Assets.xcassets */; };
 		4A5368741DB759B400978C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5368721DB759B400978C82 /* LaunchScreen.storyboard */; };
+		4A53687D1DB76C2E00978C82 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A53687C1DB76C2E00978C82 /* QRCodeViewController.swift */; };
+		4A5368821DB7767200978C82 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5368811DB7767200978C82 /* WebViewController.swift */; };
+		4A5368841DB77A8900978C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5368831DB77A8900978C82 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A5368661DB759B400978C82 /* MakeItSlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItSlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5368691DB759B400978C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A53686B1DB759B400978C82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4A53686E1DB759B400978C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A5368701DB759B400978C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A5368731DB759B400978C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A5368751DB759B400978C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A53687C1DB76C2E00978C82 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		4A5368811DB7767200978C82 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		4A5368831DB77A8900978C82 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		4A5368681DB759B400978C82 /* MakeItSlow */ = {
 			isa = PBXGroup;
 			children = (
+				4A5368801DB7763100978C82 /* WebView */,
+				4A53687B1DB76C0F00978C82 /* QR */,
 				4A5368691DB759B400978C82 /* AppDelegate.swift */,
+				4A5368831DB77A8900978C82 /* Main.storyboard */,
 				4A53686B1DB759B400978C82 /* ViewController.swift */,
-				4A53686D1DB759B400978C82 /* Main.storyboard */,
 				4A5368701DB759B400978C82 /* Assets.xcassets */,
 				4A5368721DB759B400978C82 /* LaunchScreen.storyboard */,
 				4A5368751DB759B400978C82 /* Info.plist */,
 			);
 			path = MakeItSlow;
+			sourceTree = "<group>";
+		};
+		4A53687B1DB76C0F00978C82 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				4A53687C1DB76C2E00978C82 /* QRCodeViewController.swift */,
+			);
+			name = QR;
+			sourceTree = "<group>";
+		};
+		4A5368801DB7763100978C82 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				4A5368811DB7767200978C82 /* WebViewController.swift */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +147,7 @@
 			files = (
 				4A5368741DB759B400978C82 /* LaunchScreen.storyboard in Resources */,
 				4A5368711DB759B400978C82 /* Assets.xcassets in Resources */,
-				4A53686F1DB759B400978C82 /* Main.storyboard in Resources */,
+				4A5368841DB77A8900978C82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,21 +159,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A53686C1DB759B400978C82 /* ViewController.swift in Sources */,
+				4A53687D1DB76C2E00978C82 /* QRCodeViewController.swift in Sources */,
 				4A53686A1DB759B400978C82 /* AppDelegate.swift in Sources */,
+				4A5368821DB7767200978C82 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4A53686D1DB759B400978C82 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4A53686E1DB759B400978C82 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4A5368721DB759B400978C82 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,6 +309,7 @@
 				4A53687A1DB759B400978C82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
