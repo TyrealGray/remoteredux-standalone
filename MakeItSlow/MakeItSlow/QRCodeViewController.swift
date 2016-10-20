@@ -12,21 +12,19 @@ import AVFoundation
 
 class QRCodeViewController: UIViewController {
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ScanDone"{
-            let controller = segue.destinationViewController as! UINavigationController
-            let viewController = controller.viewControllers.first as! ViewController
-            viewController.urlString = sender as? String
-        }
-    }
-    
     @IBOutlet weak var scanLineConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var containerHeihhtCons: NSLayoutConstraint!
     
     @IBOutlet weak var scanImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         startAnimation()
         
@@ -101,6 +99,18 @@ class QRCodeViewController: UIViewController {
         layer.frame = UIScreen.mainScreen().bounds
         return layer
     }()
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ScanDone"{
+            let controller = segue.destinationViewController as! UINavigationController
+            let viewController = controller.viewControllers.first as! ViewController
+            if let urlStr = sender as? String{
+                viewController.setUrlTo(urlStr)
+            }
+            
+        }
+    }
 }
 
 
@@ -109,62 +119,8 @@ extension QRCodeViewController:AVCaptureMetadataOutputObjectsDelegate
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)
     {
         //print(metadataObjects)
-        clearlayer()
-        //        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        //navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-        //navigationItem.title = metadataObjects.last?.stringValue
-        
         self.performSegueWithIdentifier("ScanDone", sender: metadataObjects.last?.stringValue)
-        
-        for object in metadataObjects{
-            if object is AVMetadataMachineReadableCodeObject {
-                let codeobject = previewLayer.transformedMetadataObjectForMetadataObject(object as! AVMetadataObject) as!AVMetadataMachineReadableCodeObject
-                
-                drawCorners(codeobject)
-            }
-        }
+        session.stopRunning()
     }
     
-    func drawCorners(codeobject:AVMetadataMachineReadableCodeObject)
-    {
-        let layer = CAShapeLayer()
-        layer.lineWidth = 2
-        layer.strokeColor = UIColor.greenColor().CGColor
-        layer.fillColor = UIColor.clearColor().CGColor
-        
-        let path = UIBezierPath()
-        var point = CGPointZero
-        var index = 0
-        
-        CGPointMakeWithDictionaryRepresentation((codeobject.corners[index] as! CFDictionaryRef), &point)
-        path.moveToPoint(point)
-        
-        index += 1
-        
-        while index < codeobject.corners.count {
-            
-            
-            CGPointMakeWithDictionaryRepresentation((codeobject.corners[index] as! CFDictionaryRef), &point)
-            path.addLineToPoint(point)
-            
-            index += 1
-        }
-        
-        path.closePath()
-        
-        layer.path = path.CGPath
-        
-        drawlayer.addSublayer(layer)
-    }
-    
-    func clearlayer()
-    {
-        if drawlayer.sublayers == nil || drawlayer.sublayers?.count == 0 {
-            return
-        }
-        
-        for subLayer in drawlayer.sublayers! {
-            subLayer.removeFromSuperlayer()
-        }
-    }
 }
