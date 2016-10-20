@@ -98,6 +98,25 @@
             </objects>
             <point key="canvasLocation" x="-101.5" y="709.5"/>
         </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="YeV-qI-JRU">
+            <objects>
+                <viewController id="Tf1-DJ-vf5" customClass="ContactViewController" customModule="MakeItSlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jrL-je-Dsj"/>
+                        <viewControllerLayoutGuide type="bottom" id="umc-Bw-IMT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XG0-0y-g83">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OJ-j7-kld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530.5" y="-92.5"/>
+        </scene>
         <!--Add-->
         <scene sceneID="7w7-GZ-bHe">
             <objects>
@@ -124,6 +143,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2h-3P-VGF">
                                 <rect key="frame" x="164" y="27" width="46" height="30"/>
                                 <state key="normal" title="Event"/>
+                                <connections>
+                                    <segue destination="Tf1-DJ-vf5" kind="show" id="fjb-Yi-OTD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
