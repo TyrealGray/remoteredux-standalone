@@ -11,17 +11,16 @@ import WebKit
 
 class ViewController: UIViewController {
     
-    var urlString:String?
+    @IBOutlet var webView: UIWebView!
+    
+    var currentUrl:String?
+    
+    var isWebInit:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if ((urlString) != nil){
-            
-            let webview = self.embeddedViewController as WebViewController
-            webview.goUrl(urlString!)
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,18 +31,56 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.setWebView();
     }
     
-    private weak var embeddedViewController: WebViewController!
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let wvvc = segue.destinationViewController as? WebViewController
-            where segue.identifier == "EmbedWebView" {
+    func setWebView() {
+        
+        if(!isWebInit){
+
+            goUrl("https://tyrealgray.github.io/MakeItSlow/")
             
-            self.embeddedViewController = wvvc
+            webView.scalesPageToFit = true
+
+            webView.delegate = self
+            
+            isWebInit = true;
         }
+        
+        if((currentUrl) != nil){
+            goUrl(currentUrl!)
+            currentUrl = nil
+        }else{
+            goUrl("https://tyrealgray.github.io/MakeItSlow/")
+        }
+
+    }
+    
+    private func goUrl(urlStr:String){
+        let url:NSURL = NSURL(string:urlStr)!
+        let request:NSURLRequest = NSURLRequest(URL:url)
+        webView.loadRequest(request)
+    }
+    
+    func setUrlTo(url:String){
+        currentUrl = url;
     }
 
+}
+
+extension ViewController: UIWebViewDelegate {
+
+    func webViewDidStartLoad(webView: UIWebView) {
+        print("loading")
+    }
+
+    func webViewDidFinishLoad(webView: UIWebView) {
+        print("finished")
+    }
+    
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        print("failed")
+    }
 }
 
 
