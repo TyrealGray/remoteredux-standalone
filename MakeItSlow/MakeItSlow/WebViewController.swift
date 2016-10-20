@@ -14,6 +14,7 @@ class WebViewController: UIViewController, WKNavigationDelegate,WKUIDelegate {
     
     var wk: WKWebView!
     var curretUrl: String!
+    var isInit:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,21 +30,26 @@ class WebViewController: UIViewController, WKNavigationDelegate,WKUIDelegate {
     
     
     override func viewDidAppear(animated: Bool) {
+        
         super.viewDidAppear(animated)
         
         self.wk = WKWebView(frame: self.view.frame)
         
         if((curretUrl) != nil){
             self.wk.loadRequest(NSURLRequest(URL: NSURL(string: curretUrl)!))
+            curretUrl = nil
         }else{
             self.wk.loadRequest(NSURLRequest(URL: NSURL(string: "https://tyrealgray.github.io/MakeItSlow/")!))
         }
+
         
-        
-        self.view.addSubview(self.wk)
-        
-        self.wk.navigationDelegate = self
-        self.wk.UIDelegate = self
+        if(!isInit){
+            self.view.addSubview(self.wk)
+            
+            self.wk.navigationDelegate = self
+            self.wk.UIDelegate = self
+            isInit = true
+        }
         
     }
     
