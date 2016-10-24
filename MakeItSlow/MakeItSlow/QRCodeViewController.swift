@@ -58,7 +58,7 @@ class QRCodeViewController: UIViewController {
         
         view.layer.insertSublayer(previewLayer, atIndex: 0)
         
-        previewLayer.addSublayer(drawlayer)
+        //previewLayer.addSublayer(drawlayer)
         
         session.startRunning()
         
@@ -84,21 +84,19 @@ class QRCodeViewController: UIViewController {
         }
     }()
     
-    //拿到输出对象
     private lazy var avcapOutput:AVCaptureMetadataOutput = AVCaptureMetadataOutput()
     
-    //创建预览图层
     private lazy var previewLayer: AVCaptureVideoPreviewLayer = {
         let layer = AVCaptureVideoPreviewLayer(session: self.session)
         layer.frame = UIScreen.mainScreen().bounds
         return layer
     }()
     
-    private lazy var drawlayer: CALayer = {
-        let layer = CALayer()
-        layer.frame = UIScreen.mainScreen().bounds
-        return layer
-    }()
+//    private lazy var drawlayer: CALayer = {
+//        let layer = CALayer()
+//        layer.frame = UIScreen.mainScreen().bounds
+//        return layer
+//    }()
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.setWebView();
+        self.setWebView()
     }
     
     func setWebView() {
@@ -44,13 +44,15 @@ class ViewController: UIViewController {
 
             webView.delegate = self
             
-            isWebInit = true;
+            isWebInit = true
         }
         
         if((currentUrl) != nil){
             goUrl(currentUrl!)
             currentUrl = nil
-        }else{
+        }
+        else
+        {
             goUrl("https://tyrealgray.github.io/MakeItSlow/")
         }
 
@@ -63,7 +65,7 @@ class ViewController: UIViewController {
     }
     
     func setUrlTo(url:String){
-        currentUrl = url;
+        currentUrl = url
     }
 
 }
