@@ -45,15 +45,13 @@ class ViewController: UIViewController {
             webView.delegate = self
             
             isWebInit = true
-        }
-        
-        if((currentUrl) != nil){
+        }else if((currentUrl) != nil){
             goUrl(currentUrl!)
             currentUrl = nil
         }
         else
         {
-            goUrl("https://tyrealgray.github.io/MakeItSlow/")
+            goUrl("https://tyrealgray.github.io/MakeItSlow/profile.html")
         }
 
     }
