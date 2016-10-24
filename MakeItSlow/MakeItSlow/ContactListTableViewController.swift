@@ -14,7 +14,9 @@ class ContactListTableViewController: UITableViewController {
     var contactsData:[ContactItem] = []
     
     var addressBook:ABAddressBookRef?
-
+    
+    @IBOutlet weak var InviteDoneBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,21 @@ class ContactListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("InviteDone", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "InviteDone"{
+            let controller = segue.destinationViewController as! UINavigationController
+            let viewController = controller.viewControllers.first as! ViewController
+            
+            viewController.inviteGuest(self.contactsData)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

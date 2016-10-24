@@ -58,6 +58,19 @@ class ViewController: UIViewController {
 
     }
     
+    func inviteGuest(guests:[ContactItem]){
+        
+        self.webView.stringByEvaluatingJavaScriptFromString("clearGuest()")
+        
+        for guest in guests{
+            self.webView.stringByEvaluatingJavaScriptFromString("addGuest(" + guest.firstName! + ")")
+        }
+        
+        
+        self.webView.stringByEvaluatingJavaScriptFromString("showGuestConfirmedModal()")
+        
+    }
+    
     private func goUrl(urlStr:String){
         let url:NSURL = NSURL(string:urlStr)!
         let request:NSURLRequest = NSURLRequest(URL:url)
