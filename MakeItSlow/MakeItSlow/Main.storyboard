@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQf-dF-2FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898.5" y="709.5"/>
+            <point key="canvasLocation" x="384.5" y="709.5"/>
         </scene>
         <!--HHL-->
         <scene sceneID="zwC-V3-y15">
@@ -138,13 +138,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contact List" id="VAe-h0-seR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YnE-5u-BCG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YnE-5u-BCG">
+                            <connections>
+                                <action selector="buttonPressed:" destination="PcN-g6-xBP" id="QC8-Td-Bwu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="InviteDoneBtn" destination="YnE-5u-BCG" id="tka-el-5Wb"/>
+                        <segue destination="4c2-UT-kte" kind="show" identifier="InviteDone" id="VtD-OA-FQr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnb-iL-6pH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898.5" y="-26.5"/>
+            <point key="canvasLocation" x="-1067.5" y="2483.5"/>
         </scene>
         <!--Add-->
         <scene sceneID="7w7-GZ-bHe">
@@ -192,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WR9-OI-ItZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408.5" y="709.5"/>
+            <point key="canvasLocation" x="-101.5" y="1631.5"/>
         </scene>
     </scenes>
     <resources>
@@ -200,4 +208,7 @@
         <image name="qrcode_scanline_qrcode" width="218" height="170"/>
         <image name="qrcode_tabbar_icon_qrcode_highlighted" width="40" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VtD-OA-FQr"/>
+    </inferredMetricsTieBreakers>
 </document>
