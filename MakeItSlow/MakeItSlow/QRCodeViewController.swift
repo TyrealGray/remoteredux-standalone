@@ -92,12 +92,6 @@ class QRCodeViewController: UIViewController {
         return layer
     }()
     
-//    private lazy var drawlayer: CALayer = {
-//        let layer = CALayer()
-//        layer.frame = UIScreen.mainScreen().bounds
-//        return layer
-//    }()
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "ScanDone"{
