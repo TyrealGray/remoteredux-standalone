@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         self.setWebView()
     }
     
-    func setWebView() {
+    private func setWebView() {
         
         if(!isWebInit){
 
@@ -45,13 +45,11 @@ class ViewController: UIViewController {
             webView.delegate = self
             
             isWebInit = true
-        }else if((currentUrl) != nil){
+        }
+        else if((currentUrl) != nil){
+             
             goUrl(currentUrl!)
             currentUrl = nil
-        }
-        else
-        {
-            goUrl("https://tyrealgray.github.io/MakeItSlow/profile.html")
         }
 
     }
