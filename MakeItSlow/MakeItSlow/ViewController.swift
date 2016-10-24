@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.webView.delegate = self
         self.setWebView()
     }
     
@@ -45,12 +46,15 @@ class ViewController: UIViewController {
             webView.delegate = self
             
             isWebInit = true
+            
+            //self.webView.stringByEvaluatingJavaScriptFromString("alert('y!')")
         }
         else if((currentUrl) != nil){
              
             goUrl(currentUrl!)
             currentUrl = nil
         }
+        
 
     }
     
