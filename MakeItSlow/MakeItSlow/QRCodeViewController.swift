@@ -53,7 +53,7 @@ class QRCodeViewController: UIViewController {
         
         avcapOutput.metadataObjectTypes = avcapOutput.availableMetadataObjectTypes
         
-        //这个是只可读的
+        //read only
         avcapOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
         
         view.layer.insertSublayer(previewLayer, atIndex: 0)
