@@ -118,14 +118,14 @@
                                             <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PBZ-a7-zdS">
                                             <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -152,7 +152,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnb-iL-6pH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1067.5" y="2483.5"/>
+            <point key="canvasLocation" x="-1081.5" y="2480.5"/>
         </scene>
         <!--Add-->
         <scene sceneID="7w7-GZ-bHe">
@@ -179,7 +179,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2h-3P-VGF">
                                 <rect key="frame" x="164" y="27" width="46" height="30"/>
-                                <state key="normal" title="Event"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Invite"/>
                                 <connections>
                                     <segue destination="PcN-g6-xBP" kind="show" id="cSQ-wf-GQ2"/>
                                 </connections>
@@ -209,6 +210,6 @@
         <image name="qrcode_tabbar_icon_qrcode_highlighted" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VtD-OA-FQr"/>
+        <segue reference="Zmr-9t-UKW"/>
     </inferredMetricsTieBreakers>
 </document>

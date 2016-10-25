@@ -11,13 +11,13 @@ import WebKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var webView: UIWebView!
-    
+    var isInit:Bool = false
+
     var currentUrl:String?
     
     var guestNames:[ContactItem]?
     
-    var isWebInit:Bool = false
+    @IBOutlet var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,23 +31,23 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
         
-        self.webView.delegate = self
+        super.viewDidAppear(animated)
+
         self.setWebView()
     }
     
     private func setWebView() {
         
-        if(!isWebInit){
+        if(!isInit){
+            
+            isInit = true
 
             goUrl("https://tyrealgray.github.io/MakeItSlow/")
             
             webView.scalesPageToFit = true
 
             webView.delegate = self
-            
-            isWebInit = true
             
         }
         else if((currentUrl) != nil){
@@ -59,7 +59,6 @@ class ViewController: UIViewController {
         if((guestNames) != nil){
             goUrl("https://tyrealgray.github.io/MakeItSlow/profile.html")
         }
-        
         
     }
     
@@ -75,7 +74,12 @@ class ViewController: UIViewController {
     }
     
     func setUrlTo(url:String){
-        currentUrl = url
+        self.currentUrl = url
+        
+        if(!self.isInit){
+            self.isInit = true
+        }
+        
     }
 
 }
@@ -92,8 +96,7 @@ extension ViewController: UIWebViewDelegate {
         if((guestNames) != nil){
             
             self.webView.stringByEvaluatingJavaScriptFromString("clearGuest()")
-            
-            
+
             
             for guest in guestNames!{
                 self.webView.stringByEvaluatingJavaScriptFromString("addGuest('" + guest.firstName! + "')")
