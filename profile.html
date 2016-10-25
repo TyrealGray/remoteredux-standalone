@@ -483,7 +483,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="exampleModalLabel">New message</h4>
+				<h4 class="modal-title" id="exampleModalLabel">Message for guests</h4>
 			</div>
 			<div class="modal-body">
 				<form>
@@ -531,7 +531,10 @@
 		var guestNames = "";
 
 		for (var index = 0,len = guestList.length;index < len;++index){
-			guestNames += "@"+guestList[index];
+
+			if('' === guestList[index])continue;
+
+			guestNames += " @"+guestList[index];
 		}
 
 		$('#recipient-name').val(guestNames);
