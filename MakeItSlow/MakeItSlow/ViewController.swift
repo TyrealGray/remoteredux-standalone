@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     var currentUrl:String?
     
+    var guestNames:[ContactItem]?
+    
     var isWebInit:Bool = false
     
     override func viewDidLoad() {
@@ -55,20 +57,25 @@ class ViewController: UIViewController {
             currentUrl = nil
         }
         
+        if((guestNames) != nil){
+            self.webView.stringByEvaluatingJavaScriptFromString("clearGuest()")
+            
+            for guest in guestNames!{
+                self.webView.stringByEvaluatingJavaScriptFromString("addGuest(" + guest.firstName! + ")")
+            }
+            
+            
+            self.webView.stringByEvaluatingJavaScriptFromString("showGuestConfirmedModal()")
+            
+            guestNames = nil
+        }
+        
 
     }
     
     func inviteGuest(guests:[ContactItem]){
         
-        self.webView.stringByEvaluatingJavaScriptFromString("clearGuest()")
-        
-        for guest in guests{
-            self.webView.stringByEvaluatingJavaScriptFromString("addGuest(" + guest.firstName! + ")")
-        }
-        
-        
-        self.webView.stringByEvaluatingJavaScriptFromString("showGuestConfirmedModal()")
-        
+        guestNames = guests
     }
     
     private func goUrl(urlStr:String){
