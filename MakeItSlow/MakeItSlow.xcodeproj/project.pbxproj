@@ -13,7 +13,8 @@
 		4A5368741DB759B400978C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5368721DB759B400978C82 /* LaunchScreen.storyboard */; };
 		4A53687D1DB76C2E00978C82 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A53687C1DB76C2E00978C82 /* QRCodeViewController.swift */; };
 		4A5368841DB77A8900978C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5368831DB77A8900978C82 /* Main.storyboard */; };
-		4A5368921DB91E3700978C82 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5368911DB91E3700978C82 /* ContactViewController.swift */; };
+		4A5368941DBE028600978C82 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5368931DBE028600978C82 /* ContactListTableViewController.swift */; };
+		4A5368961DBE065C00978C82 /* ContactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5368951DBE065C00978C82 /* ContactItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		4A5368751DB759B400978C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A53687C1DB76C2E00978C82 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		4A5368831DB77A8900978C82 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4A5368911DB91E3700978C82 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		4A5368931DBE028600978C82 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
+		4A5368951DBE065C00978C82 /* ContactItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,8 @@
 		4A5368901DB91D8D00978C82 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				4A5368911DB91E3700978C82 /* ContactViewController.swift */,
+				4A5368931DBE028600978C82 /* ContactListTableViewController.swift */,
+				4A5368951DBE065C00978C82 /* ContactItem.swift */,
 			);
 			name = Contact;
 			sourceTree = "<group>";
@@ -159,8 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A53686C1DB759B400978C82 /* ViewController.swift in Sources */,
-				4A5368921DB91E3700978C82 /* ContactViewController.swift in Sources */,
 				4A53687D1DB76C2E00978C82 /* QRCodeViewController.swift in Sources */,
+				4A5368961DBE065C00978C82 /* ContactItem.swift in Sources */,
+				4A5368941DBE028600978C82 /* ContactListTableViewController.swift in Sources */,
 				4A53686A1DB759B400978C82 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
