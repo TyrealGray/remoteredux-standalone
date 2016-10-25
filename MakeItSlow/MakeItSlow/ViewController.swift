@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     var currentUrl:String?
     
+    var guestNames:[ContactItem]?
+    
     var isWebInit:Bool = false
     
     override func viewDidLoad() {
@@ -31,10 +33,11 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.setWebView();
+        self.webView.delegate = self
+        self.setWebView()
     }
     
-    func setWebView() {
+    private func setWebView() {
         
         if(!isWebInit){
 
@@ -44,16 +47,35 @@ class ViewController: UIViewController {
 
             webView.delegate = self
             
-            isWebInit = true;
+            isWebInit = true
+            
+            //self.webView.stringByEvaluatingJavaScriptFromString("alert('y!')")
         }
-        
-        if((currentUrl) != nil){
+        else if((currentUrl) != nil){
+             
             goUrl(currentUrl!)
             currentUrl = nil
-        }else{
-            goUrl("https://tyrealgray.github.io/MakeItSlow/")
         }
+        
+        if((guestNames) != nil){
+            self.webView.stringByEvaluatingJavaScriptFromString("clearGuest()")
+            
+            for guest in guestNames!{
+                self.webView.stringByEvaluatingJavaScriptFromString("addGuest(" + guest.firstName! + ")")
+            }
+            
+            
+            self.webView.stringByEvaluatingJavaScriptFromString("showGuestConfirmedModal()")
+            
+            guestNames = nil
+        }
+        
 
+    }
+    
+    func inviteGuest(guests:[ContactItem]){
+        
+        guestNames = guests
     }
     
     private func goUrl(urlStr:String){
@@ -63,7 +85,7 @@ class ViewController: UIViewController {
     }
     
     func setUrlTo(url:String){
-        currentUrl = url;
+        currentUrl = url
     }
 
 }
