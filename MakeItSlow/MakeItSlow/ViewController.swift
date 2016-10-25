@@ -49,7 +49,6 @@ class ViewController: UIViewController {
             
             isWebInit = true
             
-            //self.webView.stringByEvaluatingJavaScriptFromString("alert('y!')")
         }
         else if((currentUrl) != nil){
              
@@ -58,19 +57,10 @@ class ViewController: UIViewController {
         }
         
         if((guestNames) != nil){
-            self.webView.stringByEvaluatingJavaScriptFromString("clearGuest()")
-            
-            for guest in guestNames!{
-                self.webView.stringByEvaluatingJavaScriptFromString("addGuest(" + guest.firstName! + ")")
-            }
-            
-            
-            self.webView.stringByEvaluatingJavaScriptFromString("showGuestConfirmedModal()")
-            
-            guestNames = nil
+            goUrl("https://tyrealgray.github.io/MakeItSlow/profile.html")
         }
         
-
+        
     }
     
     func inviteGuest(guests:[ContactItem]){
@@ -98,6 +88,22 @@ extension ViewController: UIWebViewDelegate {
 
     func webViewDidFinishLoad(webView: UIWebView) {
         print("finished")
+        
+        if((guestNames) != nil){
+            
+            self.webView.stringByEvaluatingJavaScriptFromString("clearGuest()")
+            
+            
+            
+            for guest in guestNames!{
+                self.webView.stringByEvaluatingJavaScriptFromString("addGuest('" + guest.firstName! + "')")
+            }
+            
+            self.webView.stringByEvaluatingJavaScriptFromString("showGuestConfirmedModal()")
+            
+            guestNames = nil
+            
+        }
     }
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
