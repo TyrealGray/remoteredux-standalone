@@ -30,9 +30,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidLayoutSubviews() {
         
-        super.viewDidAppear(animated)
+        super.viewDidLayoutSubviews()
 
         self.setWebView()
     }
@@ -75,10 +75,6 @@ class ViewController: UIViewController {
     
     func setUrlTo(url:String){
         self.currentUrl = url
-        
-        if(!self.isInit){
-            self.isInit = true
-        }
         
     }
 
