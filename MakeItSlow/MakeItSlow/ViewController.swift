@@ -37,21 +37,21 @@ class ViewController: UIViewController {
         self.setWebView()
     }
     
-    private func setWebView() {
+    private func setWebView(){
         
         if(!isInit){
             
             isInit = true
-
+            
             goUrl("https://tyrealgray.github.io/MakeItSlow/")
             
             webView.scalesPageToFit = true
-
+            
             webView.delegate = self
             
         }
         else if((currentUrl) != nil){
-             
+            
             goUrl(currentUrl!)
             currentUrl = nil
         }
@@ -59,7 +59,6 @@ class ViewController: UIViewController {
         if((guestNames) != nil){
             goUrl("https://tyrealgray.github.io/MakeItSlow/profile.html")
         }
-        
     }
     
     func inviteGuest(guests:[ContactItem]){
