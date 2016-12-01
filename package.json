@@ -10,7 +10,12 @@
     "react": "15.3.1",
     "react-dom": "15.3.1",
     "react-native": "0.37.0",
-    "react-web": "0.4.5"
+    "react-redux": "^4.4.6",
+    "react-web": "0.4.5",
+    "redux": "^3.6.0",
+    "redux-actions": "^1.1.0",
+    "redux-persist": "^4.0.0-beta1",
+    "redux-thunk": "^2.1.0"
   },
   "jest": {
     "preset": "react-native"
