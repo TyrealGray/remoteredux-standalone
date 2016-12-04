@@ -9,10 +9,15 @@ import {
 export default class MakeItSlowApp extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      days:0
+    }
   }
 
   render() {
-    return (<View style={{ flex:1,flexDirection: 'column', justifyContent:'center'}}><Text style={{alignSelf:'center'}}>Text</Text></View>)
+    var info = 'Your have '+ this.state.days +' days left';
+    return (<View style={{ flex:1,flexDirection: 'column', justifyContent:'center',alignSelf:'center'}}><Text>{info}</Text></View>)
   }
 }
 
