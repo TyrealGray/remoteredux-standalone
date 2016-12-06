@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 
 // import { connect } from 'react-redux';
+import Styles from './styles/appStyle';
 
 export default class MakeItSlowApp extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ export default class MakeItSlowApp extends Component {
 
   render() {
     var info = 'Your have '+ this.state.days +' days left';
-    return (<View style={{ flex:1,flexDirection: 'column', justifyContent:'center',alignSelf:'center'}}><Text>{info}</Text></View>)
+    return (<View style={Styles.layout_centerContain}><Text>{info}</Text></View>)
   }
 }
 
