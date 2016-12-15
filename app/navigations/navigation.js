@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Text, Navigator, TouchableHighlight } from 'react-native';
 
 export default class Navigation extends Component {
+
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
       <Navigator
