@@ -7,18 +7,22 @@ import {
 // import { connect } from 'react-redux';
 import Styles from './styles/appStyle';
 
+import Navigation from './navigations/navigation';
+
 export default class MakeItSlowApp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      days:0
+      days: 0
     }
   }
 
   render() {
-    var info = 'Your have '+ this.state.days +' days left';
-    return (<View style={Styles.layout_centerContain}><Text>{info}</Text></View>)
+    var info = 'Your have ' + this.state.days + ' days left';
+    return (<View style={Styles.layout_contain}>
+      <Navigation />
+    </View>)
   }
 }
 
