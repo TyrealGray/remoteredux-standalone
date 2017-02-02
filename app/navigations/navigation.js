@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Navigator, TouchableHighlight } from 'react-native';
+import { Text, Navigator } from 'react-native';
 
 export default class Navigation extends Component {
 
