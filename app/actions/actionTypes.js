@@ -1,0 +1,1 @@
+const NAV_PUSH = 'NAV_PUSH';
