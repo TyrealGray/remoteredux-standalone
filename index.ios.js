@@ -16,11 +16,3 @@ import {
 import App from './app/entry';
 
 AppRegistry.registerComponent('MakeItSlow', () => App);
-
-if (Platform.OS == 'web') {
-	var app = document.createElement('div');
-	document.body.appendChild(app);
-	AppRegistry.runApplication('App', {
-		rootTag: app
-	})
-}
