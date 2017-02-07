@@ -11,20 +11,22 @@ export default class Navigation extends Component {
 
   renderScene(route, nav){
 
-    const page = <Guide/>;
+    let Component = null;
 
     switch(route.page){
       case 'home':
-      return page;
+      Component = Guide;
       default:
       break;
     }
+
+    return <Component/>;
   }
 
   render() {
     return (
       <Navigator
-        initialRoute={{ page: 'home'}}
+        initialRoute={{ page: 'home',component: Guide}}
         renderScene={
           (route, nav) => this.renderScene(route, nav)
         }
