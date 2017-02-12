@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, Navigator } from 'react-native';
 
-import Guide from '../screens/guide';
+import getPage from './navigatorMap';
 
 export default class Navigation extends Component {
 
@@ -11,22 +11,15 @@ export default class Navigation extends Component {
 
   renderScene(route, nav){
 
-    let Component = null;
+    let Page = getPage(route.page);
 
-    switch(route.page){
-      case 'home':
-      Component = Guide;
-      default:
-      break;
-    }
-
-    return <Component/>;
+    return <Page/>;
   }
 
   render() {
     return (
       <Navigator
-        initialRoute={{ page: 'home',component: Guide}}
+        initialRoute={{ page: 'home'}}
         renderScene={
           (route, nav) => this.renderScene(route, nav)
         }
