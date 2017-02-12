@@ -13,7 +13,7 @@ export default class Navigation extends Component {
 
     let Page = getPage(route.page);
 
-    return <Page/>;
+    return <Page navigation={nav} />;
   }
 
   render() {
