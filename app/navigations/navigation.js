@@ -3,7 +3,9 @@ import { Text, Navigator } from 'react-native';
 
 import getPage from './navigatorMap';
 
-export default class Navigation extends Component {
+import { connect } from 'react-redux';
+
+class Navigation extends Component {
 
   constructor(props){
     super(props);
@@ -11,15 +13,17 @@ export default class Navigation extends Component {
 
   renderScene(route, nav){
 
-    let Page = getPage(route.page);
+    let Page = route.page;
 
     return <Page navigation={nav} />;
   }
 
   render() {
+    const {navigator} = this.props;
+
     return (
       <Navigator
-        initialRoute={{ page: 'home'}}
+        initialRoute={navigator}
         renderScene={
           (route, nav) => this.renderScene(route, nav)
         }
@@ -28,3 +32,12 @@ export default class Navigation extends Component {
     );
   }
 }
+
+export default connect(
+  (state) => ({
+    navigator: state.navigator
+  }),
+  (dispatch) => ({
+    //increment: (id) => dispatch(actions.increment(id))
+  })
+)(Navigation)

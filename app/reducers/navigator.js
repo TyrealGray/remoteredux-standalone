@@ -1,27 +1,15 @@
 import * as types from '../actions/actionTypes';
 
-import Guide from '../screens/guide';
-
-function ggetPage(name){
-    let page = null;
-    
-    switch(name){
-        case 'home':
-        page = Guide;
-        default:
-        break;
-    }
-
-    return page;
-}
+import getPage from '../navigations/navigatorMap';
 
 const initialState = {
+    index: 0,
     name: 'home',
-    page: Guide
+    page: getPage('home')
 };
 
 export default function navigator(state = initialState, actions = {}){
-    switch (action.type){
+    switch (actions.type){
         case types.NAV_PUSH:
          return{
              ...state,

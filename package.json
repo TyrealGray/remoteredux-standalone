@@ -11,7 +11,8 @@
     "react-native": "0.41.1",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
-    "redux-persist": "^4.3.0"
+    "redux-persist": "^4.3.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-jest": "18.0.0",

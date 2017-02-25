@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 // import { createStore, applyMiddleware, combineReducers } from 'redux';
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 // import thunk from 'redux-thunk';
 
 // import * as reducers from './reducers';
+import configureStore from './configureStore';
 import MakeItSlowApp from './makeItSlowApp';
 
 // const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
@@ -11,11 +12,20 @@ import MakeItSlowApp from './makeItSlowApp';
 // const store = createStoreWithMiddleware(reducer);
 
 export default class App extends Component {
+
+constructor(){
+  super();
+  this.state ={
+    store: configureStore(()=>{})
+  }
+}
+
   render() {
+
     return (
-      //<Provider store={store}>
+      <Provider store={this.state.store}>
         <MakeItSlowApp />
-      //</Provider>
+      </Provider>
     );
   }
 }

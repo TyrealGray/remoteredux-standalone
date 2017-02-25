@@ -1,14 +1,28 @@
-import React, {Component} from 'react';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
+import {AsyncStorage} from 'react-native';
+import {createStore, applyMiddleware, combineReducers, compose} from 'redux';
 import thunk from 'redux-thunk';
+import {persistStore, autoRehydrate} from 'redux-persist';
 
 import * as reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const reducer = combineReducers(reducers);
-store = createStoreWithMiddleware(reducer);
 
-export default function configureStore(onComplete){
-    // const store = 
+/**
+ * configure redux store to persist and rehydrate.
+ */
+export default function configureStore(onComplete) {
+
+	const enhancer = compose(
+		applyMiddleware(thunk),
+		autoRehydrate()
+	);
+
+	const store = createStore(
+		reducer,
+		{},
+		enhancer
+	);
+
+	persistStore(store, {storage: AsyncStorage, blacklist:[]}, onComplete).purge();
+	return store;
 }
