@@ -1,2 +1,2 @@
-# MakeItSlow
-You will want to make it slow once you see it
+# RemoteReduxDebugger
+native client for none-web redux debugging

@@ -1,27 +1,52 @@
 {
-  "name": "MakeItSlow",
-  "version": "0.0.1",
-  "private": true,
+  "name": "remotereduxdebugger",
+  "version": "1.0.0",
+  "main": "index.html",
+  "window": {
+    "title": "RemoteReduxDebugger"
+  },
+  "build": {
+    "appId": "io.github.tyrealgray.remotereduxdebugger",
+    "nwVersion": "0.30.1",
+    "packed": true,
+    "targets": [
+      "zip"
+    ],
+    "strippedProperties": [
+      "build"
+    ]
+  },
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "dist-mac": "build --tasks mac-x64 .",
+    "dist-win": "build --tasks win-x64 .",
+    "init": "npm i && node ./script/init.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": "15.4.2",
-    "react-native": "0.41.1",
-    "react-redux": "^5.0.2",
-    "redux": "^3.6.0",
-    "redux-persist": "^4.3.0",
-    "redux-thunk": "^2.2.0"
-  },
+  "author": "Tyreal Gray",
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "babel-jest": "18.0.0",
-    "babel-preset-react-native": "1.9.1",
-    "jest": "18.1.0",
-    "react-test-renderer": "15.4.2",
-    "redux-devtools": "^3.3.2"
+    "cli-spinner": "0.2.8",
+    "download": "7.0.0",
+    "nwjs-builder-phoenix": "1.14.6"
   },
-  "jest": {
-    "preset": "react-native"
-  }
+  "optionalDependencies": {
+    "7zip-bin-mac": "1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TyrealGray/RemoteReduxDebugger.git"
+  },
+  "keywords": [
+    "redux",
+    "devtool",
+    "debugger",
+    "nw.js",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/TyrealGray/RemoteReduxDebugger/issues"
+  },
+  "homepage": "https://github.com/TyrealGray/RemoteReduxDebugger#readme",
+  "description": "native client for none-web redux debugging"
 }
