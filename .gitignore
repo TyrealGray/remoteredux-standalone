@@ -1,19 +1,5 @@
-# node.js
-node_modules/*
-
-#ide
-.idea/*
-
-#nwjs
-nwjs-*-win-x64/*
-nwjs-*-osx-x64/*
-
-＃dist
-dist/*
-
-# Logs
-logs
+node_modules
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.DS_Store
+coverage
+.idea
