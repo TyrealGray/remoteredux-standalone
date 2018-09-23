@@ -1,6 +1,6 @@
 {
   "name": "remoteredux-standalone",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A standalone monitor, debugging redux even without internet.",
   "main": "index.js",
   "bin": {
