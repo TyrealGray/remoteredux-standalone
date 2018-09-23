@@ -15,16 +15,20 @@ app.on('window-all-closed', function() {
 });
 
 app.on('ready', function() {
-	tryStartApp(argv);
+    let port = argv.port;
+    if(port){
+        port = parseInt(port);
+    }
+    tryStartApp(port);
 });
 
-function tryStartApp(argv) {
-	request('http://localhost:'+ (argv.port? argv.port: 8000), function (error, response) {
-		if (!error && response.statusCode === 200) {
+function tryStartApp(port) {
+	request('http://localhost:'+ (port? port: 8000), function (error, response) {
+		if (!error && (response.statusCode === 200 || response.statusCode === 304)) {
 			// Create the browser window.
 			mainWindow = new BrowserWindow({width: 800, height: 600});
 
-			mainWindow.loadURL('http://localhost:'+ (argv.port? argv.port: 8000) );
+			mainWindow.loadURL('http://localhost:'+ (port? port: 8000) );
 
 			// Emitted when the window is closed.
 			mainWindow.on('closed', function() {
@@ -35,7 +39,7 @@ function tryStartApp(argv) {
 		}
 
 		setTimeout(function () {
-			tryStartApp(argv);
+			tryStartApp(port);
 		},1000)
 	});
 }
