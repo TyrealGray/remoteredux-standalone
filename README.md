@@ -30,7 +30,7 @@ To use WSS, set `protocol` argument to `https` and provide `key`, `cert` and `pa
 ```
 $ remoteredux --hostname=localhost --port=8000
 ```
-
+Right now `localhost:8000` is default setting
 ### License 
 
 MIT
