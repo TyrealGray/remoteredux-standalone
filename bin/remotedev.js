@@ -9,6 +9,7 @@ var injectServer = require('./injectServer');
 var getOptions = require('./../lib/options');
 
 var mainWindow = null;
+argv.hostname = argv.hostname? argv.hostname: "localhost";
 
 app.on('window-all-closed', function() {
 	app.quit();
@@ -16,19 +17,23 @@ app.on('window-all-closed', function() {
 
 app.on('ready', function() {
     let port = argv.port;
+    let hostname = argv.hostname? argv.hostname: "localhost";
     if(port){
         port = parseInt(port);
+    }else {
+	    port = 8000;
     }
-    tryStartApp(port);
+
+    tryStartApp(hostname,port);
 });
 
-function tryStartApp(port) {
-	request('http://localhost:'+ (port? port: 8000), function (error, response) {
+function tryStartApp(hostname,port) {
+	request(`${(argv.protocol === 'https')? 'https': 'http'}://${hostname}:${port}`, function (error, response) {
 		if (!error && (response.statusCode === 200 || response.statusCode === 304)) {
 			// Create the browser window.
 			mainWindow = new BrowserWindow({width: 800, height: 600});
 
-			mainWindow.loadURL('http://localhost:'+ (port? port: 8000) );
+			mainWindow.loadURL(`${(argv.protocol === 'https')? 'https': 'http'}://${hostname}:${port}`);
 
 			// Emitted when the window is closed.
 			mainWindow.on('closed', function() {
@@ -39,7 +44,7 @@ function tryStartApp(port) {
 		}
 
 		setTimeout(function () {
-			tryStartApp(port);
+			tryStartApp(hostname, port);
 		},1000)
 	});
 }
