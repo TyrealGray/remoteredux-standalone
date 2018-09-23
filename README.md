@@ -9,6 +9,11 @@ A standalone monitor, debugging redux even without internet. Based on [`remotede
 $ npm install -g remoteredux-standalone
 ```
 
+##### for macOS
+```
+$ npm install -g remoteredux-standalone --unsafe-perm=true --allow-root
+```
+
 ### Usage
 
 ##### Now run remoteredux from the terminal to launch the standalone DevTools app:
