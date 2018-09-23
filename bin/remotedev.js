@@ -1,3 +1,4 @@
+var request = require('request');
 var app = require('electron').app;
 var BrowserWindow = require('electron').BrowserWindow;
 var fs = require('fs');
@@ -8,33 +9,36 @@ var injectServer = require('./injectServer');
 var getOptions = require('./../lib/options');
 
 var mainWindow = null;
-var defaultThemeName = argv.theme;
 
 app.on('window-all-closed', function() {
 	app.quit();
 });
 
 app.on('ready', function() {
-	// Create the browser window.
-	mainWindow = new BrowserWindow({width: 800, height: 600});
-
-	mainWindow.loadURL('http://localhost:'+ (argv.port? argv.port: 8000) );
-
-	setTimeout(function () {
-		mainWindow.reload();
-	},5000);
-
-	if (defaultThemeName) {
-		mainWindow.webContents.executeJavaScript(
-			'window.devtools.setDefaultThemeName(' + JSON.stringify(defaultThemeName) + ')'
-		);
-	}
-
-	// Emitted when the window is closed.
-	mainWindow.on('closed', function() {
-		mainWindow = null;
-	});
+	tryStartApp(argv);
 });
+
+function tryStartApp(argv) {
+	request('http://localhost:'+ (argv.port? argv.port: 8000), function (error, response) {
+		if (!error && response.statusCode === 200) {
+			// Create the browser window.
+			mainWindow = new BrowserWindow({width: 800, height: 600});
+
+			mainWindow.loadURL('http://localhost:'+ (argv.port? argv.port: 8000) );
+
+			// Emitted when the window is closed.
+			mainWindow.on('closed', function() {
+				mainWindow = null;
+			});
+
+			return;
+		}
+
+		setTimeout(function () {
+			tryStartApp(argv);
+		},1000)
+	});
+}
 
 function readFile(filePath) {
   return fs.readFileSync(path.resolve(process.cwd(), filePath), 'utf-8');
