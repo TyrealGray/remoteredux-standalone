@@ -1,8 +1,9 @@
 remoteredux-standalone
 ================
 
-A standalone monitor, debugging redux even without internet. Based on [`remotedev`](https://github.com/zalmoxisus/remotedev).
+A standalone monitor, debugging redux even without internet. Based on [`remotedev-server`](https://github.com/zalmoxisus/remotedev-server).
 
+![remoteredux-standalone](https://github.com/TyrealGray/remoteredux-standalone/blob/master/debugger.gif)
 ### Installation
 
 ```
