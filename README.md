@@ -1,7 +1,8 @@
 remoteredux-standalone
 ================
 
-A standalone monitor, debugging redux even without internet. Based on [`remotedev-server`](https://github.com/zalmoxisus/remotedev-server).
+A standalone monitor, debugging redux even without internet. Bridge for communicating with an application remotely via [Redux DevTools extension](https://github.com/zalmoxisus/redux-devtools-extension), [Remote Redux DevTools](https://github.com/zalmoxisus/remote-redux-devtools) or [RemoteDev](https://github.com/zalmoxisus/remotedev).
+Based on [remotedev-server](https://github.com/zalmoxisus/remotedev-server).
 
 ![remoteredux-standalone](https://raw.githubusercontent.com/TyrealGray/remoteredux-standalone/master/debugger.gif)
 ### Installation
@@ -37,13 +38,12 @@ Then run remoteredux from the terminal
 ```
 $ npm run remoteredux
 ```
-
 Or run in your `server.js` script for starting a development server:
 ```js
 var remoteredux = require('remoteredux-standalone');
 remoteredux({ hostname: 'localhost', port: 8000 });
 ```
-This way start remoteredux together with your dev server without electron interface, you will have to use your own browser.
+This `server.js` will start remoteredux together with your dev server without electron interface, you will have to use your own browser go into your host address.
 
 ### Connection settings
 
