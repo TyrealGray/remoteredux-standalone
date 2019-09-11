@@ -10,9 +10,9 @@ Based on [remotedev-server](https://github.com/zalmoxisus/remotedev-server).
 ```
 $ npm install -g remoteredux-standalone
 ```
-##### for macOS
+##### for macOS/linux
 ```
-$ npm install -g remoteredux-standalone --unsafe-perm=true --allow-root
+$ sudo npm install -g remoteredux-standalone --unsafe-perm=true --allow-root
 ```
 #### Or install in `package.json`
 ```
@@ -53,7 +53,6 @@ To use WSS, set `protocol` argument to `https` and provide `key`, `cert` and `pa
 ```
 $ remoteredux --hostname=localhost --port=8000
 ```
-Right now `localhost:8000` is default setting
 
 ### Inject to React Native local server
 
