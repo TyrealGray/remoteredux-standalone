@@ -1,7 +1,7 @@
 remoteredux-standalone
 ================
 
-A standalone monitor, debugging redux even without internet. Bridge for communicating with an application remotely via [Redux DevTools extension](https://github.com/zalmoxisus/redux-devtools-extension), [Remote Redux DevTools](https://github.com/zalmoxisus/remote-redux-devtools) or [RemoteDev](https://github.com/zalmoxisus/remotedev).
+A standalone monitor, debugging redux even without internet. Bridge for communicating with an application remotely via [Remote Redux DevTools](https://github.com/zalmoxisus/remote-redux-devtools).
 Based on [remotedev-server](https://github.com/zalmoxisus/remotedev-server).
 
 ![remoteredux-standalone](https://raw.githubusercontent.com/TyrealGray/remoteredux-standalone/master/debugger.gif)
