@@ -26,7 +26,7 @@
     "cors": "^2.7.1",
     "cross-spawn": "^6.0.5",
     "ejs": "^2.4.1",
-    "electron": "3.0.0",
+    "electron": "7.2.4",
     "express": "^4.13.3",
     "getport": "^0.1.0",
     "js-data": "^2.9.0",
