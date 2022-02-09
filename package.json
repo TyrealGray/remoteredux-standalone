@@ -29,7 +29,7 @@
     "electron": "9.4.0",
     "express": "^4.13.3",
     "getport": "^0.1.0",
-    "js-data": "^2.9.0",
+    "js-data": "^3.0.11",
     "lodash": "^4.15.0",
     "minimist": "^1.2.0",
     "object-assign": "^4.0.0",
